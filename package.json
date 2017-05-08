@@ -1,6 +1,6 @@
 {
   "name": "@tuxsudo/b64",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base64 encoding and decoding for web and node",
   "main": "dist/index.js",
   "scripts": {

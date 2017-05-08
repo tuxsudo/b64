@@ -7,13 +7,13 @@ export const encode = (str) => {
 
     return isBrowser
         ? btoa(escaped)
-        : new Buffer(escaped, "utf8").toString("base64");
+        : new Buffer(escaped, "binary").toString("base64");
 };
 
 export const decode = (str) => {
     const decoded = isBrowser
         ? atob(str)
-        : new Buffer(str, "base64").toString("utf8");
+        : new Buffer(str, "base64").toString("binary");
 
     return decodeURIComponent(
         decoded.split('').map( (c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')
